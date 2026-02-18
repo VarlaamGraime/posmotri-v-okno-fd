@@ -161,11 +161,6 @@ ol {
   height: 100%;
 }
 
-.content__list-container {
-  height: 334px;
-  overflow: overlay;
-}
-
 .result__video-container {
   width: 711px;
   height: 419px;
@@ -190,9 +185,12 @@ ol {
 }
 
 .content__list-container {
+  height: 334px;
+  overflow: overlay;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
 }
 
 .content__list {
@@ -251,7 +249,6 @@ ol {
   line-clamp: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .title {
@@ -328,9 +325,5 @@ ol {
 }
 
 .result__video-container {
-  position: relative;
-}
-
-.content__list-container {
   position: relative;
 }
