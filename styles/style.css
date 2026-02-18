@@ -164,6 +164,7 @@ ol {
 .result__video-container {
   width: 711px;
   height: 419px;
+  position: relative;
 }
 
 .result__video {
@@ -322,8 +323,4 @@ ol {
 .button:focus-visible {
   outline: 1px #fff solid;
   outline-offset: 1px;
-}
-
-.result__video-container {
-  position: relative;
 }
