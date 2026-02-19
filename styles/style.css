@@ -58,19 +58,18 @@ ol {
   grid-row: 2;
   width: 1140px;
   gap: 30px;
-  margin-bottom: 32px;
+  margin-bottom: 100px;
 }
 
 .search-form {
   display: flex;
   flex-direction: row;
   align-items: start;
-  margin-bottom: 19px;
+  margin-bottom: 33px;
 }
 
 .search-form:nth-child(2n) {
   gap: 20px;
-  display: flex;
   justify-content: space-between;
 }
 
@@ -85,7 +84,7 @@ ol {
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-style: normal;
   margin-bottom: 5px;
 }
@@ -96,9 +95,6 @@ ol {
 }
 
 .search-form__textfield {
-  font-style: inherit;
-  font-size: inherit;
-  font-family: inherit;
   background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
@@ -106,14 +102,11 @@ ol {
   border-right: none;
   width: 225px;
   cursor: pointer;
+  appearance: none;
 }
 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
-  font-size: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  appearance: none;
 }
 
 .search-form__fieldset {
@@ -159,11 +152,19 @@ ol {
 .content__details {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.result{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .result__video-container {
   width: 711px;
-  height: 419px;
+  height: 386px;
   position: relative;
 }
 
@@ -187,11 +188,12 @@ ol {
 
 .content__list-container {
   height: 334px;
-  overflow: overlay;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
   position: relative;
+  margin-bottom: 19px;
 }
 
 .content__list {
@@ -236,7 +238,7 @@ ol {
 .content__video-card-title {
   font-size: 30px;
   font-weight: 700;
-  font-family: "Oswald";
+  font-family: "Oswald", serif;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
@@ -248,6 +250,8 @@ ol {
   overflow: hidden;
   -webkit-line-clamp: 4;
   line-clamp: 4;
+  /* Also define the standard property 'line-clamp' for compatibilitycss(vendorPrefix)
+The -webkit-line-clamp CSS property allows limiting of the contents of a block container to the specified number of lines. */
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
@@ -255,9 +259,9 @@ ol {
 .title {
   font-size: 75px;
   font-weight: 700;
-  font-family: "Oswald";
+  font-family: "Oswald", serif;
   font-style: normal;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   line-height: 94%;
   text-transform: uppercase;
 }
@@ -284,6 +288,7 @@ ol {
 .content__card-link:hover {
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  text-decoration-thickness: 2px;
 }
 
 .button {
